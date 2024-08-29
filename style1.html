@@ -20,6 +20,27 @@
             float: left
         }
 
+        #sidebar {
+            background-color: #32a4e7;
+            color: #ffffff;
+            padding: 10px;
+            width: 180px;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            position: absolute;
+        }
+
+
+        #bottom {
+            border: 1px solid #d4d4d4;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+            line-height: 14px;
+        }
+
         .menuitem {
             background-color: #f1f1f1;
             border: 1px solid #d4d4d4;
@@ -28,13 +49,18 @@
             cursor: pointer;
         }
 
-        .nospace {
-            padding: 0;
+        .menuitem:hover {
+            background-color: #ffffff;
         }
 
-        #Side-Bar {
-            width: 200px;
-            float: right
+        .menuitem:first-child {
+            background-color: #04AA6D;
+            color: white;
+            font-weight: bold;
+        }
+
+        .nospace {
+            padding: 0;
         }
     </style>
 </head>
@@ -47,12 +73,12 @@
     </div>
 
     <div id="menu">
-        <ul id="menuitem">
-            <li>Stylesheet 1</li>
-            <li>Stylesheet 2</li>
-            <li>Stylesheet 3</li>
-            <li>Stylesheet 4</li>
-            <li>No Stylesheet</li>
+        <ul>
+            <li class="menuitem">Stylesheet 1</li>
+            <li class="menuitem">Stylesheet 2</li>
+            <li class="menuitem">Stylesheet 3</li>
+            <li class="menuitem">Stylesheet 4</li>
+            <li class="menuitem">No Stylesheet</li>
         </ul>
     </div>
 
@@ -73,7 +99,7 @@
 
     </div>
 
-    <div id="Side-Bar">
+    <div id="sidebar">
         <h3>Side-Bar</h3>
 
         <p>
@@ -83,7 +109,7 @@
         </p>
     </div>
 
-    <div>
+    <div id="bottom">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
         dolore
         magna aliquam erat volutpat.
