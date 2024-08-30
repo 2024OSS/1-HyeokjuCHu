@@ -6,30 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        #top {
-            background-color: #04AA6D;
+        body {
+            font: 100% Lucida Sans, Verdana;
+            margin: 20px;
+            line-height: 26px;
         }
 
+        .container {
+            overflow-x: 900px;
+        }
 
         .wrapper {
             position: relative;
             overflow: auto;
         }
 
-
-
-        .white {
-            color: white;
+        #top,
+        #sidebar,
+        #bottom,
+        .menuitem {
+            border-radius: 4px;
+            margin: 4px;
         }
 
-        #body {
-            padding: 10px;
-            margin: 0 210px;
+        #top {
+            background-color: #04AA6D;
+            color: #ffffff;
+            padding: 15px;
         }
 
-        #menu {
+        #menubar {
             width: 200px;
             float: left
+        }
+
+        #main {
+            padding: 10px;
+            margin: 0 210px;
         }
 
         #sidebar {
@@ -43,7 +56,6 @@
             position: absolute;
         }
 
-
         #bottom {
             border: 1px solid #d4d4d4;
             background-color: #f1f1f1;
@@ -51,6 +63,13 @@
             padding: 10px;
             font-size: 70%;
             line-height: 14px;
+        }
+
+        #top h1,
+        #top p,
+        #menulist {
+            margin: 0;
+            padding: 0;
         }
 
         .menuitem {
@@ -70,74 +89,54 @@
             color: white;
             font-weight: bold;
         }
-
-        .nospace {
-            padding: 0;
-        }
-
-        #top,
-        #sidebar,
-        #bottom,
-        .menuitem {
-            border-radius: 4px;
-            margin: 4px;
-        }
-
-        #top h1,
-        #top p,
-        #menu {
-            margin: 0;
-            padding: 0;
-        }
     </style>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="container wrapper">
         <div id="top">
-            <h1 class="white">Welcome to Hyeokju's Homepage(22100062)</h1>
-            <p class="white nospace">Use the menu to select different Stylesheets</p>
+            <h1>Welcome to Hyeokju's Homepage(22100062)</h1>
+            <p">Use the menu to select different Stylesheets</p>
         </div>
+        <div class="wrapper">
+            <div id="menubar">
+                <ul id="menulist">
+                    <li class="menuitem"><a href ="style1.html">Stylesheet 1</a></li>
+                    <li class="menuitem"><a href ="style2.html">Stylesheet 2</a></li>
+                    <li class="menuitem"> <a href ="nostyle.html">No Stylesheet</a></li>
+                </ul>
+            </div>
 
-        <div id="menu">
-            <ul>
-                <li class="menuitem">Stylesheet 1</li>
-                <li class="menuitem">Stylesheet 2</li>
-                <li class="menuitem">Stylesheet 3</li>
-                <li class="menuitem">Stylesheet 4</li>
-                <li class="menuitem">No Stylesheet</li>
-            </ul>
-        </div>
+            <div id="main">
+                <h1>Same Page Different Stylesheets</h1>
 
-        <div id="body">
-            <h1>Same Page Different Stylesheets</h1>
+                This is a demonstration of how different stylesheets can change the layout of your HTML page. You can
+                change
+                the
+                layout of this page by selecting different stylesheets in the menu, or by selecting one of the following
+                links:
+                <a href="style1.html"">Stylesheet1</a>,<a href=" style2.html">Stylesheet2</a>
 
-            This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change
-            the
-            layout of this page by selecting different stylesheets in the menu, or by selecting one of the following
-            links:
-            <a href="style1.html"">Stylesheet1</a>,<a href=" style2.html">
-                Stylesheet2</a>, <a href="#">Stylesheet3</a>, <a href="#">Stylesheet4.</a>
+                <h2>No Styles</h2>
 
-            <h2>No Styles</h2>
+                This page uses DIV elements to group different sections of the HTML page. Click here to see how the page
+                looks
+                like
+                with no stylesheet:
+                <a href="nostyle.html">No Stylesheet.</a>
 
-            This page uses DIV elements to group different sections of the HTML page. Click here to see how the page
-            looks
-            like
-            with no stylesheet:
-            <a href="#" onclick="event.preventDefault();">No Stylesheet.</a>
+            </div>
 
-        </div>
+            <div id="sidebar">
+                <h3>Side-Bar</h3>
 
-        <div id="sidebar">
-            <h3>Side-Bar</h3>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet
-                dolore
-                magna aliquam erat volutpat.
-            </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet
+                    dolore
+                    magna aliquam erat volutpat.
+                </p>
+            </div>
         </div>
 
     </div>
